@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 class ImageByRoomCdContainer extends StatefulWidget {
-  @override
-  ImageByRoomCdContainerState createState() {
-    return new ImageByRoomCdContainerState();
-  }
-
 //  @override
-//  _VideoAppState createState() => _VideoAppState();
+//  ImageByRoomCdContainerState createState() {
+//    return new ImageByRoomCdContainerState();
+//  }
+
+  @override
+  _VideoAppState createState() => _VideoAppState();
 }
 
 class ImageByRoomCdContainerState extends State<ImageByRoomCdContainer> {

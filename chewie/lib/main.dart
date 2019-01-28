@@ -1,3 +1,4 @@
+import 'package:chewie/image_by_roomcd_container.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -102,10 +103,30 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _goToFurniture,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  void _goToFurniture() {
+    setState(() {
+      final pageRoute = new MaterialPageRoute(builder: (context) {
+        //Now return a widget, we choose "Scaffold"
+        return new Scaffold(
+            appBar: new AppBar(
+              title: new Text("Chewie video"),
+            ),
+            body: ImageByRoomCdContainer(
+//              onInit: () {
+//                StoreProvider.of<AppState>(context)
+//                    .dispatch(LoadImageByRoomCdAction(apartment.roomCd));
+//              },
+//              roomCd: apartment.roomCd
+            ));
+      });
+      Navigator.of(context).push(pageRoute);
+    });
   }
 }
