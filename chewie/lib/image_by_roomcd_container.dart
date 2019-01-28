@@ -38,7 +38,7 @@ class _VideoAppState extends State<ImageByRoomCdContainer> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
         body: Center(
           child: _controller.value.initialized
               ? AspectRatio(
