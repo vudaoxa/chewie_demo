@@ -1,0 +1,86 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color create --template app --description Flutter application: demo video pause when exit. --org com.example chewie_demo
+
+## exception
+
+YamlException: Error on line 2, column 33: Mapping values are not allowed here. Did you miss a colon earlier?
+description: Flutter application: demo video pause when exit.
+                                ^
+
+```
+#0      Scanner._fetchValue (package:yaml/src/scanner.dart:713:9)
+#1      Scanner._fetchNextToken (package:yaml/src/scanner.dart:457:11)
+#2      Scanner._fetchMoreTokens (package:yaml/src/scanner.dart:339:7)
+#3      Scanner.peek (package:yaml/src/scanner.dart:317:27)
+#4      Parser._parseBlockMappingKey (package:yaml/src/parser.dart:418:26)
+#5      Parser._stateMachine (package:yaml/src/parser.dart:86:16)
+#6      Parser.parse (package:yaml/src/parser.dart:47:19)
+#7      Loader._loadMapping (package:yaml/src/loader.dart:171:23)
+#8      Loader._loadNode (package:yaml/src/loader.dart:86:16)
+#9      Loader._loadDocument (package:yaml/src/loader.dart:62:20)
+#10     Loader.load (package:yaml/src/loader.dart:54:20)
+#11     loadYamlDocument (package:yaml/yaml.dart:51:25)
+#12     loadYamlNode (package:yaml/yaml.dart:42:5)
+#13     loadYaml (package:yaml/yaml.dart:34:5)
+#14     FlutterManifest.createFromString (package:flutter_tools/src/flutter_manifest.dart:42:28)
+<asynchronous suspension>
+#15     FlutterManifest.createFromPath (package:flutter_tools/src/flutter_manifest.dart:36:12)
+<asynchronous suspension>
+#16     FlutterProject._readManifest (package:flutter_tools/src/project.dart:128:60)
+<asynchronous suspension>
+#17     FlutterProject.fromDirectory (package:flutter_tools/src/project.dart:42:44)
+<asynchronous suspension>
+#18     CreateCommand._generateApp (package:flutter_tools/src/commands/create.dart:469:57)
+<asynchronous suspension>
+#19     CreateCommand.runCommand (package:flutter_tools/src/commands/create.dart:319:37)
+<asynchronous suspension>
+#20     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:401:18)
+#21     _asyncThenWrapperHelper.<anonymous closure> (dart:async/runtime/libasync_patch.dart:77:64)
+#22     _rootRunUnary (dart:async/zone.dart:1132:38)
+#23     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#24     _FutureListener.handleValue (dart:async/future_impl.dart:129:18)
+#25     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:642:45)
+#26     Future._propagateToListeners (dart:async/future_impl.dart:671:32)
+#27     Future._complete (dart:async/future_impl.dart:476:7)
+#28     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#29     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async/runtime/libasync_patch.dart:33:20)
+#30     _rootRun (dart:async/zone.dart:1124:13)
+#31     _CustomZone.run (dart:async/zone.dart:1021:19)
+#32     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#33     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#34     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#35     _runPendingImmediateCallback (dart:isolate/runtime/libisolate_patch.dart:115:13)
+#36     _RawReceivePortImpl._handleMessage (dart:isolate/runtime/libisolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.0.0, on Microsoft Windows [Version 10.0.16299.904], locale en-US)
+    • Flutter version 1.0.0 at F:\vunq\download\tool\ide\flutter_windows_v1.0.0-stable\flutter
+    • Framework revision 5391447fae (8 weeks ago), 2018-11-29 19:41:26 -0800
+    • Engine revision 7375a0f414
+    • Dart version 2.1.0 (build 2.1.0-dev.9.4 f9ebf21297)
+
+[✓] Android toolchain - develop for Android devices (Android SDK 28.0.3)
+    • Android SDK at C:\Users\vudao\AppData\Local\Android\sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-28, build-tools 28.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1248-b01)
+    • All Android licenses accepted.
+
+[✓] Android Studio (version 3.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin version 31.3.3
+    • Dart plugin version 182.5124
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1248-b01)
+
+[✓] Connected device (1 available)
+    • SM G920P • 06157df6c2ef8b11 • android-arm64 • Android 6.0.1 (API 23)
+
+• No issues found!
+```
