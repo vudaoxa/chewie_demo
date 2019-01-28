@@ -1,4 +1,4 @@
-import 'package:chewie_demo/media.dart';
+import 'package:chewie/media.dart';
 import 'package:flutter/material.dart';
 
 class ImageByRoomCd extends StatefulWidget {

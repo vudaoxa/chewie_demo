@@ -1,4 +1,4 @@
-import 'package:chewie/chewie.dart';
+//import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -33,12 +33,13 @@ void showImage(BuildContext context, String image) {
 
 Widget _buildView(String image) {
   //todo fix bug: can not pause video after exit fullscreen
-  return Chewie(
-    _videoController = VideoPlayerController.network(
-        'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'),
-    aspectRatio: 3 / 2,
-    autoPlay: true,
-  );
+//  return Chewie(
+//    _videoController = VideoPlayerController.network(
+//        'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'),
+//    aspectRatio: 3 / 2,
+//    autoPlay: true,
+//  );
+return Text("");
 }
 
 void _dispose() {

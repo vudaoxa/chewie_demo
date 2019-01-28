@@ -1,4 +1,4 @@
-package com.example.chewiedemo;
+package com.example.chewie;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

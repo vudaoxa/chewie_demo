@@ -1,6 +1,6 @@
-# chewie_demo
+# chewie
 
-Flutter application demo video pause when exit.
+A new Flutter application.
 
 ## Getting Started
 
